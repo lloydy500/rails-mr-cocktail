@@ -1,10 +1,7 @@
-<h1> Ahoy and welcome to the Jolly Todger! </h1>
-<h2> Choose yaarrr booze </h2>
-<ul class= "list-group">
+<div class="btn btn-success"><%= link_to "Add your own cocktail", new_cocktail_path %></div>
+<div class="row">
   <% @cocktails.each do |cocktail| %>
-    <li class= "list-group-item"> 
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
+    <%= render 'shared/card', cocktail: cocktail %>
   <% end %>
-</ul>
-<li class="btn btn-success"><%= link_to "Add your own recipe!", new_cocktail_path %></li>
+</div>
+
