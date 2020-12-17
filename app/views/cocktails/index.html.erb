@@ -1,0 +1,10 @@
+<h1> Ahoy and welcome to the Jolly Todger! </h1>
+<h2> Choose yaarrr booze </h2>
+<ul class= "list-group">
+  <% @cocktails.each do |cocktail| %>
+    <li class= "list-group-item"> 
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    </li>
+  <% end %>
+</ul>
+<li class="btn btn-success"><%= link_to "Add your own recipe!", new_cocktail_path %></li>

@@ -1,0 +1,9 @@
+<h1><%= @cocktail.name %></h1>
+<ul class="list-group">
+  <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item"> <b><%= dose.ingredient.name %></b>, <em> <%= dose.description %></em> </li>
+    
+    <% end %>
+</ul>
+<%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+<%= link_to 'Home', cocktails_path %>
