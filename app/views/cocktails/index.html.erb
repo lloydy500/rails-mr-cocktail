@@ -1,5 +1,4 @@
-<div class="btn btn-success"><%= link_to "Add your own cocktail", new_cocktail_path %></div>
-<div class="row">
+<div class="row justify-content-center">
   <% @cocktails.each do |cocktail| %>
     <%= render 'shared/card', cocktail: cocktail %>
   <% end %>
